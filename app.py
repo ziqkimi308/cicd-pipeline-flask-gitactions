@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from my CI/CD Pipeline!", 200
+    return "Hello from my CI/CD Pipeline! v2", 200
 
 
 @app.route("/health")
