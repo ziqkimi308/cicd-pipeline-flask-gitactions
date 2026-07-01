@@ -69,7 +69,8 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          scp -i ~/.ssh/deploy_key.pem -r ./ \
+          scp -i ~/.ssh/deploy_key.pem \
+            app.py test_app.py requirements.txt \
             ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/ubuntu/cicd-app-flask/
 
       - name: Restart app on EC2
